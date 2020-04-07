@@ -11,7 +11,7 @@ organizationHomepage := Some(url("https://www.scala-sbt.org/"))
 
 homepage := Some(url("https://www.scala-sbt.org/sbt-site/"))
 
-version := "1.4.0"
+version := "1.4.0-mmadt"
 crossSbtVersions := List("1.1.6")
 
 licenses += ("BSD 3-Clause", url("https://opensource.org/licenses/BSD-3-Clause"))
@@ -22,6 +22,7 @@ scmInfo := Some(ScmInfo(url("https://github.com/sbt/sbt-site"), "scm:git:git@git
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 resolvers += Resolver.sonatypeRepo("releases")
+resolvers += Resolver.mavenLocal
 
 val unfilteredVersion = "0.9.1"
 
@@ -33,7 +34,7 @@ libraryDependencies ++= Seq(
   "org.foundweekends" %% "pamflet-library" % "0.8.0",
   "org.yaml"        % "snakeyaml"        % "1.24",
   "com.typesafe"    % "config"           % "1.3.4",
-  "org.asciidoctor" % "asciidoctorj"     % "1.6.2",
+  "org.asciidoctor" % "asciidoctorj"     % "1.6.2-mmadt",
   "org.asciidoctor" % "asciidoctorj-diagram" % "1.5.16"
 )
 
